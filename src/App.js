@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Application } from "./component/Application";
+import { Dashboard } from "./component/Dashboard";
+import { Notification } from "./component/Notification";
+import { Profile } from "./component/Profile";
+import { UserManagement } from "./component/UserManagement";
+import { WorkFlow } from "./component/WorkFlow";
+import { SideNav } from "./component/sideNav";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <SideNav />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="Application" element={<Application />} />
+        <Route path="/UserManagemrnt" element={<UserManagement />} />
+        <Route path="/WorkFlow" element={<WorkFlow />} />
+        <Route path="/Notification" element={<Notification />} />
+        <Route path="Profile" element={<Profile />} />
+      </Routes>
     </div>
   );
 }
