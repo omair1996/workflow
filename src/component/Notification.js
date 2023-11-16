@@ -1,5 +1,7 @@
 export const Notification = () => {
-  <div>
-    <h1>Notification component</h1>
-  </div>;
+  return (
+    <div style={{ flex: "1", padding: "20px" }}>
+      <h1>Notification component</h1>
+    </div>
+  );
 };

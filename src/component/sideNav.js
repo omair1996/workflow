@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -6,12 +7,16 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem,
 } from "cdbreact";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
-export const SideNav = () => {
+const SideNav = () => {
   return (
     <div
-      style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
+      style={{
+        display: "flex",
+        height: "100vh",
+        overflow: "hidden",
+      }}
     >
       <CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
         <CDBSidebarHeader
@@ -26,31 +31,31 @@ export const SideNav = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink path to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+            <NavLink exact to="/" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="signal">Dashboard</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/Application" activeClassName="activeClicked">
+            <Link exact to="/Application">
               <CDBSidebarMenuItem icon="table">Applications</CDBSidebarMenuItem>
-            </NavLink>
+            </Link>
 
-            <NavLink exact to="/WokFlow" activeClassName="activeClicked">
+            <Link exact to="/WorkFlow">
               <CDBSidebarMenuItem icon="chart-line">
                 workflow configurations
               </CDBSidebarMenuItem>
-            </NavLink>
+            </Link>
 
-            <NavLink exact to="/UseManagement" activeClassName="activeClicked">
+            <Link exact to="/UserManagement" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="users">
                 Use Management
               </CDBSidebarMenuItem>
-            </NavLink>
+            </Link>
           </CDBSidebarMenu>
         </CDBSidebarContent>
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
             <div style={{ paddingTop: "50px" }}>
               <NavLink exact to="/Notification" activeClassName="activeClicked">
-                <CDBSidebarMenuItem icon="info">
+                <CDBSidebarMenuItem icon="bell">
                   Notifications
                 </CDBSidebarMenuItem>
               </NavLink>
@@ -64,3 +69,5 @@ export const SideNav = () => {
     </div>
   );
 };
+
+export default SideNav;
