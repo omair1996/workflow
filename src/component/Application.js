@@ -1,22 +1,37 @@
 import { CDBIcon } from "cdbreact";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "../App.css";
+import {
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
+  MDBDropdownItem,
+} from "mdb-react-ui-kit";
 
 function Application() {
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsFormVisible(!isFormVisible);
+  };
   return (
     <div style={{ flex: "1", fontFamily: "Open Sans, sans-serif" }}>
       <div style={{ height: "115px", border: "1px solid rgb(205, 206, 220)" }}>
         <div>
           <div className="d-flex align-items-center  justify-content-between">
             <span style={{ marginLeft: "25px", marginTop: "25px" }}>
-              <CDBIcon icon="table"></CDBIcon> Applications
+              <CDBIcon icon="table" /> Applications
             </span>
-
-            <button
-              style={{ marginRight: "25px", marginTop: "30px" }}
-              className="btn btn-primary"
-            >
-              Add New Application
-            </button>
+            <div>
+              <button
+                onClick={handleButtonClick}
+                style={{ marginRight: "25px", marginTop: "30px" }}
+                className="btn btn-primary"
+              >
+                Add New Application
+              </button>
+            </div>
           </div>
           <span
             style={{
@@ -154,23 +169,252 @@ function Application() {
           <tbody>
             <tr>
               <th scope="row">
-                <select
-                  style={{
-                    marginLeft: "25px",
-                  }}
-                ></select>{" "}
-                <Link
-                  style={{
-                    color: "blue",
-                    fontSize: "12px",
-                    fontWeight: "bold",
-                    marginLeft: "20px",
-                  }}
+                <MDBDropdown group className="shadow-0">
+                  <MDBDropdownToggle
+                    color="light"
+                    style={{
+                      height: "35px",
+                      border: "1px solid rgb(205, 206, 220",
+                    }}
+                  ></MDBDropdownToggle>
+                  <Link
+                    style={{
+                      color: "blue",
+                      fontSize: "12px",
+                      fontWeight: "bold",
+                      marginLeft: "20px",
+                    }}
+                  >
+                    Application name
+                  </Link>
+
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem>Action</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </th>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                Sample Customer
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                09 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                3 weeks
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                30 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                <CDBIcon icon="table" />
+                Device Acquisition
+              </td>
+              <td>
+                {" "}
+                <div
+                  className="split-element-40 text-center"
+                  style={{ fontSize: "12px", color: "white" }}
                 >
                   {" "}
-                  Application name
-                </Link>
+                  41%
+                </div>
+              </td>
+              <td style={{ fontSize: "12px", fontWeight: "bold" }}>Muyiwa</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <MDBDropdown group className="shadow-0">
+                  <MDBDropdownToggle
+                    color="light"
+                    style={{
+                      height: "35px",
+                      border: "1px solid rgb(205, 206, 220",
+                    }}
+                  ></MDBDropdownToggle>
+                  <Link
+                    style={{
+                      color: "blue",
+                      fontSize: "12px",
+                      fontWeight: "bold",
+                      marginLeft: "20px",
+                    }}
+                  >
+                    Application name
+                  </Link>
+
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem>Action</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
               </th>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                Sample Customer
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                09 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                3 weeks
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                30 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                <CDBIcon icon="table" />
+                Device Acquisition
+              </td>
+              <td>
+                <div
+                  className="split-element-60 text-center"
+                  style={{ fontSize: "12px", color: "white" }}
+                >
+                  60%
+                </div>
+              </td>
+              <td style={{ fontSize: "12px", fontWeight: "bold" }}>Muyiwa</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <MDBDropdown group className="shadow-0">
+                  <MDBDropdownToggle
+                    color="light"
+                    style={{
+                      height: "35px",
+                      border: "1px solid rgb(205, 206, 220",
+                    }}
+                  ></MDBDropdownToggle>
+                  <Link
+                    style={{
+                      color: "blue",
+                      fontSize: "12px",
+                      fontWeight: "bold",
+                      marginLeft: "20px",
+                    }}
+                  >
+                    Application name
+                  </Link>
+
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem>Action</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </th>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                Sample Customer
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                09 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                3 weeks
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                30 Nov 20
+              </td>
+              <td
+                style={{
+                  color: " rgb(151, 163, 172);",
+                  fontSize: "12px",
+                  opacity: "0.8",
+                }}
+              >
+                <CDBIcon icon="table" />
+                Device Acquisition
+              </td>
+              <td>
+                {" "}
+                <div
+                  className="split-element-100 text-center"
+                  style={{ fontSize: "12px", color: "white" }}
+                >
+                  complete
+                </div>
+              </td>
+              <td style={{ fontSize: "12px", fontWeight: "bold" }}>Muyiwa</td>
             </tr>
           </tbody>
         </table>
