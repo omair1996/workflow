@@ -22,12 +22,9 @@
 }
 
 .create-user {
-  -webkit-box-flex: 1;
-  flex-grow: 1;
   width: 96%;
   margin: 2%;
   max-width: 800px;
-
   position: relative;
   border-radius: 5px;
   background-color: white;
@@ -35,4 +32,17 @@
   bottom: 255px;
   left: 8px;
   border: 1px solid whitesmoke;
+}
+
+.new-application {
+  margin: 2%;
+  max-width: 800px;
+  position: relative;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(68, 70, 84);
+  bottom: 480px;
+  left: -200px;
+  border: 1px solid whitesmoke;
+  z-index: 99999;
 }

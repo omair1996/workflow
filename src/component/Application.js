@@ -273,7 +273,7 @@ function Application() {
                   </Link>
 
                   <MDBDropdownMenu>
-                    <MDBDropdownItem>Action</MDBDropdownItem>
+                    <MDBDropdownItem></MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </th>
@@ -419,6 +419,170 @@ function Application() {
           </tbody>
         </table>
       </div>
+
+      {isFormVisible && (
+        <div className="new-application container">
+          <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <CDBIcon icon="table" />
+            New Application
+          </div>
+          <hr />
+          <p>Application & Client Details</p>
+          <div className="row">
+            <div className="col-sm-4">
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Application Title
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+            <div className="col-sm-8">
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Description Of Application
+              </label>
+              <input
+                style={{ width: "86%" }}
+                type="text"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+          </div>
+          <div className="row" style={{ marginTop: "20px" }}>
+            <div className="col-sm-3">
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Client Name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+            <div className="col-sm-3">
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Client Phone Number
+              </label>
+              <input
+                type="Tel"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+            <div className="col-sm-5">
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Client Email
+              </label>
+              <input
+                type="Email"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+            <hr style={{ marginTop: "30px", marginBottom: "30px" }} />
+            <div className="col-sm-4">
+              <p>Application Assignee</p>
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Assign Application Management To Staff
+              </label>
+              <select className="form-control">
+                <option disabled selected>
+                  select....
+                </option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+              </select>
+            </div>
+            <div className="col-sm-4">
+              <p>Start Date</p>
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                select Date
+              </label>
+              <input
+                type="Date"
+                className="form-control"
+                id="exampleInputText"
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div
+              className="col-sm-4"
+              style={{
+                border: "1px solid grey",
+                marginTop: "30px",
+                padding: "30px",
+              }}
+            >
+              <p>Workflow Process</p>
+              <label
+                for="exampleInputText"
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                }}
+              >
+                Select Workflow
+              </label>
+              <select className="form-control">
+                <option disabled selected>
+                  select....
+                </option>
+                <option>Device Acquisition Workflow</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,14 +1,19 @@
 import { CDBIcon } from "cdbreact";
 import React, { useState } from "react";
 import "../App.css";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 const UserManagement = () => {
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const handleButtonClick = () => {
-    setIsFormVisible(!isFormVisible);
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const handleFileChange = (event) => {
     const fileInput = event.target;
@@ -39,7 +44,7 @@ const UserManagement = () => {
             </span>
             <div>
               <button
-                onClick={handleButtonClick}
+                onClick={handleShow}
                 style={{ marginRight: "25px", marginTop: "30px" }}
                 className="btn btn-primary"
               >
@@ -138,56 +143,28 @@ const UserManagement = () => {
           <tbody></tbody>
         </table>
       </div>
-      {isFormVisible && (
-        <div
-          className="create-user"
-          style={{
-            width: "850px",
-            zIndex: "1000px",
-          }}
-        >
-          <form>
-            <div className="container">
-              <div>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                    marginLeft: "30px",
-                    marginTop: "20px",
-                  }}
-                >
-                  {" "}
-                  <CDBIcon icon="users" />
-                  New User
-                </div>
-                <div className="d-flex justify-content-center mb-4">
-                  {selectedImage ? (
-                    <div>
-                      <img
-                        id="selectedImage"
-                        src={selectedImage}
-                        className="rounded-circle"
-                        style={{
-                          width: "130px",
-                          height: "130px",
-                          objectFit: "cover",
-                        }}
-                        alt="profile picture"
-                      />
 
-                      <span
-                        style={{ cursor: "pointer" }}
-                        onClick={handleDeleteImage}
-                      >
-                        {" "}
-                        x
-                      </span>
-                    </div>
-                  ) : (
+      <Modal
+        size="lg"
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header>
+          <Modal.Title>
+            <CDBIcon icon="users"> New User</CDBIcon>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <div className="d-flex justify-content-center ">
+                {selectedImage ? (
+                  <div>
                     <img
-                      id="selectedAvatar"
-                      src={defaultImageUrl}
+                      id="selectedImage"
+                      src={selectedImage}
                       className="rounded-circle"
                       style={{
                         width: "130px",
@@ -196,174 +173,206 @@ const UserManagement = () => {
                       }}
                       alt="profile picture"
                     />
-                  )}
-                </div>
-                <div className="d-flex justify-content-center">
-                  <div
-                    className="btn  btn-rounded"
+
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={handleDeleteImage}
+                    >
+                      {" "}
+                      x
+                    </span>
+                  </div>
+                ) : (
+                  <img
+                    id="selectedAvatar"
+                    src={defaultImageUrl}
+                    className="rounded-circle"
                     style={{
-                      border: "1px solid rgb(98, 112, 123)",
-                      backgroundColor: "rgba(98, 112, 123, 0)",
-                      height: "38px",
+                      width: "130px",
+                      height: "130px",
+                      objectFit: "cover",
+                    }}
+                    alt="profile picture"
+                  />
+                )}
+              </div>
+              <div className="d-flex justify-content-center">
+                <div
+                  className="btn  btn-rounded"
+                  style={{
+                    border: "1px solid rgb(98, 112, 123)",
+                    backgroundColor: "rgba(98, 112, 123, 0)",
+                    height: "38px",
+                  }}
+                >
+                  <label
+                    className="form-label text-drak m-1"
+                    for="customFile2"
+                    style={{
+                      fontSize: "12px",
+                      cursor: "pointer",
                     }}
                   >
+                    upload picture
+                  </label>
+                  <input
+                    type="file"
+                    className="form-control d-none"
+                    id="customFile2"
+                    onChange={handleFileChange}
+                  />
+                </div>
+              </div>
+            </Form.Group>
+            <Container>
+              <Row>
+                <Col sm={6}>
+                  <Form.Group>
                     <label
-                      className="form-label text-drak m-1"
-                      for="customFile2"
+                      for="exampleInputEmail"
                       style={{
                         fontSize: "12px",
-                        cursor: "pointer",
+                        fontWeight: "700",
+                        marginTop: "20px",
                       }}
                     >
-                      upload picture
+                      Frist Name
+                    </label>
+                    <Form.Control
+                      type="text"
+                      placeholder="first Name"
+                      autoFocus
+                    />
+                  </Form.Group>
+                </Col>
+                <Col sm={6}>
+                  <Form.Group>
+                    <label
+                      for="exampleInputEmail"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "700",
+                        marginTop: "20px",
+                      }}
+                    >
+                      Last Name
+                    </label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Last Name"
+                      autoFocus
+                    />
+                  </Form.Group>
+                </Col>
+                <Col sm={6}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <label
+                      for="exampleInputEmail"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "700",
+                        marginTop: "20px",
+                      }}
+                    >
+                      Email
                     </label>
                     <input
-                      type="file"
-                      className="form-control d-none"
-                      id="customFile2"
-                      onChange={handleFileChange}
+                      type="text"
+                      className="form-control"
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="simple@mail.com"
                     />
-                  </div>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
-                  <label
-                    for="exampleInputText"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Frist Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleInputText"
-                    placeholder="Frist Name"
-                  />
-                </div>
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
-                  <label
-                    for="exampleInputText"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleInputText"
-                    placeholder="Last Name"
-                  />
-                </div>
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
-                  <label
-                    for="exampleInputEmail"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleInputEmail"
-                    aria-describedby="emailHelp"
-                    placeholder="simple@mail.com"
-                  />
-                </div>
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
-                  <label
-                    for="exampleInputText"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Gender
-                  </label>
-                  <select
-                    type="text"
-                    className="form-control"
-                    id="exampleInputText"
-                    placeholder="Last Name"
-                  >
-                    <option disabled selected>
-                      select....
-                    </option>
-                    <option>male</option>
-                    <option>female</option>
-                  </select>
-                </div>
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
-                  <label
-                    for="exampleInputText"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Select Role
-                  </label>
-                  <select
-                    type="text"
-                    className="form-control"
-                    id="exampleInputText"
-                    placeholder="Last Name"
-                  >
-                    <option disabled selected>
-                      select....
-                    </option>
-                    <option>All</option>
-                    <option>System Administrator</option>
-                    <option>Application Officer</option>
-                    <option>Monitoring Officer</option>
-                  </select>
-                </div>
-              </div>
+                  </Form.Group>
+                </Col>
+                <Col sm={6}>
+                  <Form.Group>
+                    <label
+                      for="exampleInputText"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "700",
+                        marginTop: "20px",
+                      }}
+                    >
+                      Gender
+                    </label>
+                    <select
+                      type="text"
+                      className="form-control"
+                      id="exampleInputText"
+                      placeholder="Last Name"
+                    >
+                      <option disabled selected>
+                        select....
+                      </option>
+                      <option>male</option>
+                      <option>female</option>
+                    </select>
+                  </Form.Group>
+                </Col>
+                <Col sm={6}>
+                  <Form.Group>
+                    <label
+                      for="exampleInputText"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      Select Role
+                    </label>
+                    <select
+                      type="text"
+                      className="form-control"
+                      id="exampleInputText"
+                      placeholder="Last Name"
+                    >
+                      <option disabled selected>
+                        select....
+                      </option>
+                      <option>All</option>
+                      <option>System Administrator</option>
+                      <option>Application Officer</option>
+                      <option>Monitoring Officer</option>
+                    </select>
+                  </Form.Group>
+                </Col>
+              </Row>
               <hr style={{ marginTop: "30px" }} />
-              <div className="row">
-                <div className="col-sm-6">
-                  <label
-                    for="exampleInputEmail"
-                    style={{
-                      fontSize: "0.9em",
-                      fontWeight: "700",
-                      opacity: "0.8",
-                    }}
-                  >
-                    password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="exampleInputEmail"
-                    aria-describedby="emailHelp"
-                    placeholder="*******"
-                  />
-                </div>
-                <div className="col-sm-6" style={{ marginTop: "15px" }}>
+              <Row>
+                <Col sm={6}>
+                  <Form.Group>
+                    <label
+                      for="exampleInputEmail"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="*******"
+                    />
+                  </Form.Group>
+                </Col>
+                <Col sm={6}>
                   <div>
                     <input type="checkbox" />{" "}
                     <label
                       for="exampleInputEmail"
                       style={{
-                        fontSize: "0.9em",
+                        fontSize: "12px",
                         fontWeight: "700",
-                        opacity: "0.8",
+                        marginTop: "20px",
                       }}
                     >
                       auto generate password
@@ -374,38 +383,46 @@ const UserManagement = () => {
                     <label
                       for="exampleInputEmail"
                       style={{
-                        fontSize: "0.9em",
+                        fontSize: "12px",
                         fontWeight: "700",
-                        opacity: "0.8",
                       }}
                     >
                       Force change of password on first login
                     </label>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="d-flex justify-content-between"
+                </Col>
+              </Row>
+            </Container>
+          </Form>
+        </Modal.Body>
+        <div
+          className="d-flex justify-content-around"
+          style={{
+            backgroundColor: "rgba(151, 163, 172, 0.1)",
+            border: "1px solid gery",
+
+            height: "70px",
+            marginTop: "20px",
+          }}
+        >
+          <div style={{ marginTop: "15px" }}>
+            <button
               style={{
-                border: "1px solid gery",
-                backgroundColor: "rgba(151, 163, 172, 0.1)",
-                height: "70px",
-                marginTop: "20px",
+                backgroundColor: '"rgba(151, 163, 172, 0.1)',
+                color: "blue",
+                border: "1px solid blue",
+                padding: "8px 25px",
               }}
+              onClick={handleClose}
             >
-              <button
-                className="btn btn-light"
-                type="button"
-                onClick={handleButtonClick}
-              >
-                Close
-              </button>
-              <button className="btn btn-primary">save user</button>
-            </div>
-          </form>
+              Close
+            </button>
+          </div>
+          <div style={{ marginTop: "15px" }}>
+            <button className="btn btn-primary">Save User</button>
+          </div>
         </div>
-      )}
+      </Modal>
     </div>
   );
 };
