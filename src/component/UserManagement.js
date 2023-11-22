@@ -36,7 +36,12 @@ const UserManagement = () => {
     "https://eul.netlify.app/static/media/user.647a595e.svg";
   return (
     <div style={{ flex: "1", fontFamily: "sans-serif" }}>
-      <div style={{ border: "1px solid rgb(205, 206, 220)" }}>
+      <div
+        style={{
+          border: "1px solid rgb(205, 206, 220)",
+          paddingBottom: "30px",
+        }}
+      >
         <div>
           <div className="d-flex align-items-center  justify-content-between">
             <span style={{ marginLeft: "25px", marginTop: "25px" }}>
@@ -396,7 +401,7 @@ const UserManagement = () => {
           </Form>
         </Modal.Body>
         <div
-          className="d-flex justify-content-around"
+          className="d-flex justify-content-between"
           style={{
             backgroundColor: "rgba(151, 163, 172, 0.1)",
             border: "1px solid gery",
@@ -405,7 +410,7 @@ const UserManagement = () => {
             marginTop: "20px",
           }}
         >
-          <div style={{ marginTop: "15px" }}>
+          <div style={{ marginTop: "15px", marginLeft: "30px" }}>
             <button
               style={{
                 backgroundColor: '"rgba(151, 163, 172, 0.1)',
@@ -418,7 +423,7 @@ const UserManagement = () => {
               Close
             </button>
           </div>
-          <div style={{ marginTop: "15px" }}>
+          <div style={{ marginTop: "15px", marginRight: "30px" }}>
             <button className="btn btn-primary">Save User</button>
           </div>
         </div>

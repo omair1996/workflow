@@ -22,16 +22,11 @@
 }
 
 .create-user {
-  width: 96%;
-  margin: 2%;
-  max-width: 800px;
   position: relative;
   border-radius: 5px;
   background-color: white;
-  color: rgb(68, 70, 84);
-  bottom: 255px;
-  left: 8px;
-  border: 1px solid whitesmoke;
+  bottom: 50px;
+  left: 100px;
 }
 
 .new-application {

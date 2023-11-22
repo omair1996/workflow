@@ -6,6 +6,7 @@ import SideNav from "./component/sideNav";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Application from "./component/Application";
 import WorkFlow from "./component/WorkFlow";
+import CreateWorkFlow from "./component/CreateWorkFlow";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/WorkFlow" element={<WorkFlow />} />
           <Route path="/Notification" element={<Notification />} />
           <Route path="Profile" element={<Profile />} />
+          <Route path="/CreateWorkFlow" element={<CreateWorkFlow />} />
         </Routes>
       </div>
     </Router>
