@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-const UserManagement = () => {
+const UserManagement = ({ isSidebarOpen }) => {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -35,11 +35,19 @@ const UserManagement = () => {
   const defaultImageUrl =
     "https://eul.netlify.app/static/media/user.647a595e.svg";
   return (
-    <div style={{ flex: "1", fontFamily: "sans-serif" }}>
+    <div
+      style={{
+        flex: "1",
+        fontFamily: "sans-serif",
+        transition: "margin-left 0.3s",
+        marginLeft: isSidebarOpen ? "270px" : "93px",
+      }}
+    >
       <div
         style={{
           border: "1px solid rgb(205, 206, 220)",
           paddingBottom: "30px",
+          borderRight: "none",
         }}
       >
         <div>

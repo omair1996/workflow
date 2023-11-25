@@ -2,17 +2,58 @@ import { CDBIcon } from "cdbreact";
 import { useState } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
-import { Dropdown } from "react-bootstrap/Dropdown";
+import {
+  OverlayTrigger,
+  Popover,
+  ButtonToolbar,
+  PopoverBody,
+} from "react-bootstrap";
 
-function WorkFlow() {
+function WorkFlow({ isSidebarOpen }) {
   const [deleteButton, setDaleteButton] = useState(false);
 
   const handleDeleteButton = () => {
     setDaleteButton(!deleteButton);
   };
+
+  const popoverTop = (
+    <Popover id="popover-positioned-top-left">
+      <PopoverBody>
+        <div
+          style={{ marginTop: "10px", cursor: "pointer", fontSize: "12px" }}
+          className="d-flex justify-content-between"
+        >
+          <CDBIcon icon="chart-line" /> <span>Edit workflow</span>
+        </div>
+        <div
+          style={{ marginTop: "20px", cursor: "pointer", fontSize: "12px" }}
+          className="d-flex justify-content-between"
+        >
+          <CDBIcon icon="trash" />
+          <span> Delete workflow</span>
+        </div>
+        <div
+          style={{ marginTop: "20px", cursor: "pointer", fontSize: "12px" }}
+          className="d-flex justify-content-between"
+        >
+          <span className="fab fa-firefox" />
+          <span style={{ marginLeft: "10px" }}> Deactivate workflow</span>
+        </div>
+      </PopoverBody>
+    </Popover>
+  );
+
   return (
-    <div style={{ flex: "1", fontFamily: "Open Sans, sans-serif" }}>
-      <div style={{ height: "115px", border: "1px solid rgb(205, 206, 220)" }}>
+    <div
+      style={{
+        flex: "1",
+        fontFamily: "Open Sans, sans-serif",
+        position: "relative",
+        transition: "margin-left 0.3s",
+        marginLeft: isSidebarOpen ? "270px" : "83px",
+      }}
+    >
+      <div style={{ border: "1px solid rgb(205, 206, 220)" }}>
         <div>
           <div className="d-flex align-items-center  justify-content-between">
             <span style={{ marginLeft: "25px", marginTop: "25px" }}>
@@ -37,9 +78,12 @@ function WorkFlow() {
           >
             Manage process flows
           </span>
+          <div style={{ marginBottom: "30px" }}></div>
         </div>
       </div>
-      <div style={{ border: "1px solid rgb(205, 206, 220)" }}>
+      <div
+        style={{ border: "1px solid rgb(205, 206, 220)", borderRight: "none" }}
+      >
         <div>
           <input
             className="input"
@@ -62,13 +106,14 @@ function WorkFlow() {
         </div>
       </div>
 
-      <div className="row container">
+      <div className="row">
         <div className="col-sm-4">
           <div
             style={{
               border: "1px solid rgb(205, 206, 220)",
               borderRadius: "5px",
               marginTop: "30px",
+              marginLeft: "30px",
             }}
           >
             <div
@@ -115,19 +160,23 @@ function WorkFlow() {
                 </span>
               </div>
               <div className="col-sm-3">
-                <div className="mb-2">
-                  <button
-                    onClick={handleDeleteButton}
-                    style={{
-                      backgroundColor: "white",
-                      border: "1px solid white",
-                      marginTop: "30px",
-                      marginLeft: "15px",
-                    }}
+                <ButtonToolbar>
+                  <OverlayTrigger
+                    trigger="click"
+                    placement="top"
+                    overlay={popoverTop}
                   >
-                    <CDBIcon icon="ellipsis-h" />
-                  </button>
-                </div>
+                    <button
+                      style={{
+                        backgroundColor: "white",
+                        border: "1px solid white",
+                        marginTop: "30px",
+                      }}
+                    >
+                      <CDBIcon icon="ellipsis-h" />
+                    </button>
+                  </OverlayTrigger>
+                </ButtonToolbar>
               </div>
             </div>
             <div
@@ -138,119 +187,373 @@ function WorkFlow() {
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginLeft: "30px",
-                  marginTop: "10px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "650px",
+                    left: "71px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "651px",
+                    left: "56px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "600px",
+                    left: "56px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "600px",
+                    left: "56px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "598px",
+                    left: "71px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginLeft: "30px",
+                    marginTop: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 1, Application Processing...
-                  </span>{" "}
-                  <span className="badge badge-light">5</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 1, Application Processing...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      5
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "590px",
+                    left: isSidebarOpen ? "300px" : "350px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "591px",
+                    left: isSidebarOpen ? "305px" : "355px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "540px",
+                    left: isSidebarOpen ? "320px" : "370px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "538px",
+                    left: isSidebarOpen ? "305px" : "355px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "537px",
+                    left: isSidebarOpen ? "300px" : "350px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 2, Client Review/Asse...
-                  </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 2, Client Review/Asse...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      2
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "537px",
+                    left: "71px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "539px",
+                    left: "56px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "57px",
+                    position: "absolute",
+                    bottom: "483px",
+                    left: "56px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "482px",
+                    left: "56px",
+                  }}
+                ></label>
+
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "480px",
+                    left: "71px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 3, Device Acquisition...
-                  </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 3, Device Acquisition...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      3
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "475px",
+                    left: isSidebarOpen ? "300px" : "350px",
+                  }}
+                ></label>
+
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "476px",
+                    left: isSidebarOpen ? "305px" : "355px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "425px",
+                    left: isSidebarOpen ? "320px" : "370px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "423px",
+                    left: isSidebarOpen ? "305px" : "355px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "422px",
+                    left: isSidebarOpen ? "300px" : "350px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 4, Deployment & Hand...
-                  </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 4, Deployment & Hand...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      3
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 5, Application Finale...
-                  </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 5, Application Finale...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      2
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,6 +566,8 @@ function WorkFlow() {
               border: "1px solid rgb(205, 206, 220)",
               borderRadius: "5px",
               marginTop: "30px",
+              marginLeft: "20px",
+              marginRight: "10px",
             }}
           >
             <div
@@ -333,73 +638,204 @@ function WorkFlow() {
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginLeft: "30px",
-                  marginTop: "10px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "650px",
+                    left: isSidebarOpen ? "425px" : "487px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "651px",
+                    left: isSidebarOpen ? "410px" : "472px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "600px",
+                    left: isSidebarOpen ? "408px" : "470px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "600px",
+                    left: isSidebarOpen ? "410px" : "472px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "598px",
+                    left: isSidebarOpen ? "425px" : "487px",
+                  }}
+                ></label>
+
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginLeft: "30px",
+                    marginTop: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 1, Application Processing...
-                  </span>{" "}
-                  <span className="badge badge-light">5</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 1, Application Processing...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      5
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "590px",
+                    right: isSidebarOpen ? "410px" : "485px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "591px",
+                    right: isSidebarOpen ? "395px" : "470px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "540px",
+                    right: isSidebarOpen ? "395px" : "470px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "538px",
+                    right: isSidebarOpen ? "395px" : "470px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "537px",
+                    right: isSidebarOpen ? "410px" : "485px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 2, Client Review/Asse...
-                  </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 2, Client Review/Asse...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      2
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 3, Device Acquisition...
-                  </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 3, Device Acquisition...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      3
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -411,6 +847,7 @@ function WorkFlow() {
               border: "1px solid rgb(205, 206, 220)",
               borderRadius: "5px",
               marginTop: "30px",
+              marginRight: "20px",
             }}
           >
             <div
@@ -481,50 +918,173 @@ function WorkFlow() {
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginLeft: "30px",
-                  marginTop: "10px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "650px",
+                    right: isSidebarOpen ? "295px" : "358px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "651px",
+                    right: isSidebarOpen ? "300px" : "363px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "600px",
+                    right: isSidebarOpen ? "312px" : "378px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "600px",
+                    right: isSidebarOpen ? "297px" : "363px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "598px",
+                    right: isSidebarOpen ? "295px" : "358px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginLeft: "30px",
+                    marginTop: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 1, Application Processing...
-                  </span>{" "}
-                  <span className="badge badge-light">5</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 1, Application Processing...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      5
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "537px",
+                    right: isSidebarOpen ? "58px" : "70px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "539px",
+                    right: isSidebarOpen ? "45px" : "57px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "57px",
+                    position: "absolute",
+                    bottom: "483px",
+                    right: isSidebarOpen ? "45px" : "57px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "482px",
+                    right: isSidebarOpen ? "45px" : "57px",
+                  }}
+                ></label>
+
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "480px",
+                    right: isSidebarOpen ? "60px" : "72px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 2, Client Review/Asse...
-                  </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 2, Client Review/Asse...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      2
+                    </span>
+                  </div>
                 </div>
               </div>
               <div
@@ -547,7 +1107,15 @@ function WorkFlow() {
                     {" "}
                     Stage 3, Device Acquisition...
                   </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <span
+                    className="badge badge-light"
+                    style={{
+                      color: "rgb(255, 255, 255)",
+                      backgroundColor: "rgb(208, 213, 217)",
+                    }}
+                  >
+                    3
+                  </span>
                 </div>
               </div>
               <div
@@ -570,7 +1138,15 @@ function WorkFlow() {
                     {" "}
                     Stage 4, Deployment & Hand...
                   </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <span
+                    className="badge badge-light"
+                    style={{
+                      color: "rgb(255, 255, 255)",
+                      backgroundColor: "rgb(208, 213, 217)",
+                    }}
+                  >
+                    2
+                  </span>
                 </div>
               </div>
             </div>
@@ -644,57 +1220,178 @@ function WorkFlow() {
               </div>
             </div>
             <div
-              className=""
               style={{
                 backgroundColor: "rgb(247, 248, 254)",
                 padding: "15px",
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginLeft: "30px",
-                  marginTop: "10px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "130px",
+                    left: "40px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "132px",
+                    left: "29px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "132px",
+                    left: "29px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "184px",
+                    left: "29px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "183px",
+                    left: "40px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginLeft: "30px",
+                    marginTop: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 1, Application Processing...
-                  </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 1, Application Processing...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      3
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  height: "40px",
-                  border: "1px solid rgb(175, 177, 199)",
-                  width: "80%",
-                  display: "block",
-                  marginTop: "20px",
-                  marginLeft: "30px",
-                  backgroundColor: "rgb(255, 255, 255)",
-                }}
-              >
+              <div>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "115px",
+                    left: isSidebarOpen ? "295px" : "344px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "116px",
+                    left: isSidebarOpen ? "300px" : "348px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "53px",
+                    position: "absolute",
+                    bottom: "63px",
+                    left: isSidebarOpen ? "313px" : "362px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    bottom: "63px",
+                    left: isSidebarOpen ? "300px" : "348px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    bottom: "62px",
+                    left: isSidebarOpen ? "295px" : "344px",
+                  }}
+                ></label>
                 <div
-                  className="d-flex justify-content-between"
-                  style={{ marginTop: "12px" }}
+                  style={{
+                    height: "40px",
+                    border: "1px solid rgb(175, 177, 199)",
+                    width: "80%",
+                    display: "block",
+                    marginTop: "20px",
+                    marginLeft: "30px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
+                  }}
                 >
-                  <CDBIcon icon="ellipsis-h" />
-                  <span style={{ fontSize: "10px" }}>
-                    {" "}
-                    Stage 2, Client Review/Asse...
-                  </span>{" "}
-                  <span className="badge badge-light">3</span>
+                  <div
+                    className="d-flex justify-content-between"
+                    style={{ marginTop: "12px" }}
+                  >
+                    <CDBIcon icon="ellipsis-h" />
+                    <span style={{ fontSize: "10px" }}>
+                      {" "}
+                      Stage 2, Client Review/Asse...
+                    </span>{" "}
+                    <span
+                      className="badge badge-light"
+                      style={{
+                        color: "rgb(255, 255, 255)",
+                        backgroundColor: "rgb(208, 213, 217)",
+                      }}
+                    >
+                      3
+                    </span>
+                  </div>
                 </div>
               </div>
               <div
@@ -717,7 +1414,15 @@ function WorkFlow() {
                     {" "}
                     Stage 3, Device Acquisition...
                   </span>{" "}
-                  <span className="badge badge-light">2</span>
+                  <span
+                    className="badge badge-light"
+                    style={{
+                      color: "rgb(255, 255, 255)",
+                      backgroundColor: "rgb(208, 213, 217)",
+                    }}
+                  >
+                    2
+                  </span>
                 </div>
               </div>
             </div>

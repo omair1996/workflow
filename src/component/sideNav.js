@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -8,20 +6,31 @@ import {
   CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 
-const SideNav = () => {
+const SideNav = ({ onToggleSidebar }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    onToggleSidebar(!isSidebarOpen);
+  };
   return (
     <div
       style={{
-        display: "flex",
         height: "100vh",
-        overflow: "hidden",
+        position: "fixed",
+
+        width: isSidebarOpen ? "270px" : "93px",
+        transition: "width 0.3s",
+        fontFamily: "sans-serif",
       }}
     >
       <CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
         <CDBSidebarHeader
           prefix={
             <img
+              onClick={toggleSidebar}
               style={{ height: "65px" }}
               src="	https://eul.netlify.app/static/media/fulllogo.865179eb.svg"
               alt="logo"
