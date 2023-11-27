@@ -7,6 +7,8 @@ import {
   ButtonToolbar,
   PopoverBody,
 } from "react-bootstrap";
+import { useState } from "react";
+import "../App.css";
 
 const CreateWorkFlow = ({ isSidebarOpen }) => {
   const popoverTop = (
@@ -97,7 +99,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
           <input
             className="form-control"
             type="text"
-            placeholder=" Enter Workflow name                                                                      A - Z "
+            placeholder=" Enter Workflow name                                                                  A - Z "
             style={{
               height: "45px",
               border: "1px solid rgb(205, 206, 220)",
@@ -149,8 +151,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
             marginTop: "25px",
           }}
         >
-          <Link>
-            {" "}
+          <Link path to="/AddStage">
             <button className="btn btn-primary">
               <span style={{ marginRight: "5px" }}>+</span> Add stage
             </button>
@@ -161,50 +162,553 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
         <div className="col-sm-4 ">
           <h4 style={{ marginLeft: "30px", marginTop: "25px" }}> Stage</h4>
           <div
-            className="hover-zoom"
+            className=" zoom-out-container"
             style={{
-              border: "1px solid rgb(205, 206, 220)",
+              marginLeft: "30px",
 
-              marginLeft: "15px",
-              padding: "20px",
               marginTop: "30px",
+              marginBottom: "30px",
             }}
           >
-            <div className="d-flex align-items-center  justify-content-between">
-              <div style={{ fontSize: "12px", fontWeight: "bold" }}>
-                Stage 1 : Register Client
-              </div>
-              <div>
-                <ButtonToolbar>
-                  <OverlayTrigger
-                    trigger="click"
-                    placement="top"
-                    overlay={popoverTop}
-                  >
-                    <button
+            <div className="image-col">
+              <div
+                className="zoom-out-image"
+                style={{
+                  border: "1px solid rgb(205, 206, 220)",
+                  padding: "20px",
+                }}
+              >
+                <div>
+                  <div>
+                    <div className="d-flex align-items-center  justify-content-between">
+                      <div style={{ fontSize: "12px", fontWeight: "bold" }}>
+                        Stage 1 : Register Client
+                      </div>
+                      <div>
+                        <ButtonToolbar>
+                          <OverlayTrigger
+                            trigger="click"
+                            placement="top"
+                            overlay={popoverTop}
+                          >
+                            <button
+                              style={{
+                                backgroundColor: "white",
+                                border: "1px solid white",
+                              }}
+                            >
+                              <CDBIcon icon="ellipsis-h" />
+                            </button>
+                          </OverlayTrigger>
+                        </ButtonToolbar>
+                      </div>
+                    </div>
+                    <div
                       style={{
-                        backgroundColor: "white",
-                        border: "1px solid white",
+                        opacity: "0.8",
+                        fontSize: "12px",
+                        marginTop: "10px",
                       }}
                     >
-                      <CDBIcon icon="ellipsis-h" />
-                    </button>
-                  </OverlayTrigger>
-                </ButtonToolbar>
+                      <p>
+                        Voluptua. At vero eos et accusam et justo duo dolores et
+                        ea rebum. Stet clita kasd gubergren, no sea…
+                      </p>
+                    </div>
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginTop: "10px",
+                      }}
+                    >
+                      Steps
+                    </div>
+                    <div
+                      style={{
+                        backgroundColor: "rgb(238, 240, 253)",
+                        color: "rgb(98, 112, 123)",
+                        padding: "20px 20px",
+                      }}
+                    >
+                      <div>
+                        <label
+                          style={{
+                            backgroundColor: "rgb(179, 188, 246)",
+                            width: "10px",
+                            height: "10px",
+                            borderRadius: "50%",
+                          }}
+                        ></label>
+                        <span
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "12px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          A step has no name
+                        </span>
+                        <div
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "12px",
+                            marginLeft: "19px",
+                          }}
+                        >
+                          3 Days
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        backgroundColor: "rgb(238, 240, 253)",
+                        color: "rgb(98, 112, 123)",
+                        padding: "20px 20px",
+                        marginTop: "20px",
+                      }}
+                    >
+                      <div>
+                        <label
+                          style={{
+                            backgroundColor: "rgb(179, 188, 246)",
+                            width: "10px",
+                            height: "10px",
+                            borderRadius: "50%",
+                          }}
+                        ></label>
+                        <span
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "12px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          Second step has no name
+                        </span>
+                        <div
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "12px",
+                            marginLeft: "19px",
+                          }}
+                        >
+                          2 Days
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center  justify-content-between">
+                      <label
+                        style={{
+                          backgroundColor: "rgb(98, 112, 123)",
+                          width: "30px",
+                          height: "30px",
+                          borderRadius: "50%",
+                        }}
+                      ></label>
+                      <span
+                        style={{
+                          color: "rgba(68, 70, 84, 0.6)",
+                          fontSize: "12px",
+                        }}
+                      >
+                        <CDBIcon icon="clock" /> Cumulative Timeline
+                      </span>
+                    </div>
+                    <label style={{ fontSize: "12px" }}>
+                      {" "}
+                      <span style={{ marginLeft: "40px", opacity: "0.8" }}>
+                        Recipients
+                      </span>
+                      <span style={{ marginLeft: "70px", fontWeight: "bold" }}>
+                        1 Week, 2 Days
+                      </span>
+                    </label>
+                    <label
+                      style={{
+                        backgroundColor: "rgb(98, 112, 123)",
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        display: "block",
+                      }}
+                    ></label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              style={{ opacity: "0.8", fontSize: "12px", marginTop: "10px" }}
-            >
-              <p>
-                Voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea…
-              </p>
             </div>
           </div>
         </div>
-        <div className="col-sm-4"></div>
-        <div className="col-sm-4"></div>
+        <div className="col-sm-4 zoom-out-container ">
+          <div className="image-col">
+            <div className="zoom-out-image">
+              <div
+                className=""
+                style={{
+                  border: "1px solid rgb(205, 206, 220)",
+
+                  padding: "20px",
+                  marginTop: "40px",
+                }}
+              >
+                <div className="d-flex align-items-center  justify-content-between">
+                  <div style={{ fontSize: "12px", fontWeight: "bold" }}>
+                    Stage 1 : Register Client
+                  </div>
+                  <div>
+                    <ButtonToolbar>
+                      <OverlayTrigger
+                        trigger="click"
+                        placement="top"
+                        overlay={popoverTop}
+                      >
+                        <button
+                          style={{
+                            backgroundColor: "white",
+                            border: "1px solid white",
+                          }}
+                        >
+                          <CDBIcon icon="ellipsis-h" />
+                        </button>
+                      </OverlayTrigger>
+                    </ButtonToolbar>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    opacity: "0.8",
+                    fontSize: "12px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <p>
+                    Voluptua. At vero eos et accusam et justo duo dolores et ea
+                    rebum. Stet clita kasd gubergren, no sea…
+                  </p>
+                </div>
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "12px",
+                    marginTop: "10px",
+                  }}
+                >
+                  Steps
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgb(238, 240, 253)",
+                    color: "rgb(98, 112, 123)",
+                    padding: "20px 20px",
+                  }}
+                >
+                  <div>
+                    <label
+                      style={{
+                        backgroundColor: "rgb(179, 188, 246)",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                      }}
+                    ></label>
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      A step has no name
+                    </span>
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "19px",
+                      }}
+                    >
+                      3 Days
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgb(238, 240, 253)",
+                    color: "rgb(98, 112, 123)",
+                    padding: "20px 20px",
+                    marginTop: "20px",
+                  }}
+                >
+                  <div>
+                    <label
+                      style={{
+                        backgroundColor: "rgb(179, 188, 246)",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                      }}
+                    ></label>
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      Second step has no name
+                    </span>
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "19px",
+                      }}
+                    >
+                      2 Days
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="d-flex align-items-center  justify-content-between">
+                  <label
+                    style={{
+                      backgroundColor: "rgb(98, 112, 123)",
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "50%",
+                    }}
+                  ></label>
+                  <span
+                    style={{
+                      color: "rgba(68, 70, 84, 0.6)",
+                      fontSize: "12px",
+                    }}
+                  >
+                    <CDBIcon icon="clock" /> Cumulative Timeline
+                  </span>
+                </div>
+                <label style={{ fontSize: "12px" }}>
+                  {" "}
+                  <span style={{ marginLeft: "50px", opacity: "0.8" }}>
+                    Recipients
+                  </span>
+                  <span style={{ marginLeft: "90px", fontWeight: "bold" }}>
+                    1 Week, 2 Days
+                  </span>
+                </label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(98, 112, 123)",
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    display: "block",
+                  }}
+                ></label>
+                <label
+                  className="d-flex align-items-center justify-content-center"
+                  style={{
+                    backgroundColor: "rgb(208, 213, 217)",
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    display: "block",
+                    marginTop: "10px",
+                    fontSize: "12px",
+                  }}
+                >
+                  {" "}
+                  + 4
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-4 zoom-out-container">
+          <div className="image-col">
+            <div className="zoom-out-image">
+              <div
+                style={{
+                  border: "1px solid rgb(205, 206, 220)",
+
+                  padding: "20px",
+                  marginTop: "40px",
+                }}
+              >
+                <div className="d-flex align-items-center  justify-content-between">
+                  <div style={{ fontSize: "12px", fontWeight: "bold" }}>
+                    Stage 1 : Register Client
+                  </div>
+                  <div>
+                    <ButtonToolbar>
+                      <OverlayTrigger
+                        trigger="click"
+                        placement="top"
+                        overlay={popoverTop}
+                      >
+                        <button
+                          style={{
+                            backgroundColor: "white",
+                            border: "1px solid white",
+                          }}
+                        >
+                          <CDBIcon icon="ellipsis-h" />
+                        </button>
+                      </OverlayTrigger>
+                    </ButtonToolbar>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    opacity: "0.8",
+                    fontSize: "12px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <p>
+                    Voluptua. At vero eos et accusam et justo duo dolores et ea
+                    rebum. Stet clita kasd gubergren, no sea…
+                  </p>
+                </div>
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "12px",
+                    marginTop: "10px",
+                  }}
+                >
+                  Steps
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgb(238, 240, 253)",
+                    color: "rgb(98, 112, 123)",
+                    padding: "20px 20px",
+                  }}
+                >
+                  <div>
+                    <label
+                      style={{
+                        backgroundColor: "rgb(179, 188, 246)",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                      }}
+                    ></label>
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      A step has no name
+                    </span>
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "19px",
+                      }}
+                    >
+                      3 Days
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgb(238, 240, 253)",
+                    color: "rgb(98, 112, 123)",
+                    padding: "20px 20px",
+                    marginTop: "20px",
+                  }}
+                >
+                  <div>
+                    <label
+                      style={{
+                        backgroundColor: "rgb(179, 188, 246)",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                      }}
+                    ></label>
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      Second step has no name
+                    </span>
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "19px",
+                      }}
+                    >
+                      2 Days
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="d-flex align-items-center  justify-content-between">
+                  <label
+                    style={{
+                      backgroundColor: "rgb(98, 112, 123)",
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "50%",
+                    }}
+                  ></label>
+                  <span
+                    style={{
+                      color: "rgba(68, 70, 84, 0.6)",
+                      fontSize: "12px",
+                    }}
+                  >
+                    <CDBIcon icon="clock" /> Cumulative Timeline
+                  </span>
+                </div>
+                <label style={{ fontSize: "12px" }}>
+                  {" "}
+                  <span style={{ marginLeft: "50px", opacity: "0.8" }}>
+                    Recipients
+                  </span>
+                  <span style={{ marginLeft: "90px", fontWeight: "bold" }}>
+                    1 Week, 2 Days
+                  </span>
+                </label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(98, 112, 123)",
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    display: "block",
+                  }}
+                ></label>
+                <label
+                  className="d-flex align-items-center justify-content-center"
+                  style={{
+                    backgroundColor: "rgb(208, 213, 217)",
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    display: "block",
+                    marginTop: "10px",
+                    fontSize: "12px",
+                  }}
+                >
+                  {" "}
+                  + 4
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
