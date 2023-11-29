@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Application from "./component/Application";
 import WorkFlow from "./component/WorkFlow";
 import CreateWorkFlow from "./component/CreateWorkFlow";
+import AddStage from "./component/AddStage";
 import { useState } from "react";
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -48,6 +49,10 @@ function App() {
           <Route
             path="/CreateWorkFlow"
             element={<CreateWorkFlow isSidebarOpen={isSidebarOpen} />}
+          />
+          <Route
+            path="/AddStage"
+            element={<AddStage isSidebarOpen={isSidebarOpen} />}
           />
         </Routes>
       </div>

@@ -34,3 +34,15 @@
 .zoom-out-container:hover .image-col {
   transform: scale(1.1);
 }
+
+.rotate-button {
+  writing-mode: vertical-rl;
+
+  box-shadow: rgba(9, 28, 65, 0.2) -1px 0px 3px;
+  border-right: 1px solid rgba(205, 206, 220, 0.7);
+  background: rgb(247, 248, 254);
+  cursor: pointer;
+  padding: 10px;
+  height: 100px;
+  padding-bottom: 15px;
+}

@@ -47,13 +47,16 @@ function WorkFlow({ isSidebarOpen }) {
     <div
       style={{
         flex: "1",
+
         fontFamily: "Open Sans, sans-serif",
         position: "relative",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "83px",
+        marginLeft: isSidebarOpen ? "270px" : "80px",
       }}
     >
-      <div style={{ border: "1px solid rgb(205, 206, 220)" }}>
+      <div
+        style={{ border: "1px solid rgb(205, 206, 220)", borderRight: "none" }}
+      >
         <div>
           <div className="d-flex align-items-center  justify-content-between">
             <span style={{ marginLeft: "25px", marginTop: "25px" }}>

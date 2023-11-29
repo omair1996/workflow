@@ -42,52 +42,72 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
       style={{
         flex: "1",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "70px",
+        marginLeft: isSidebarOpen ? "270px" : "80px",
         fontFamily: "sans-serif",
       }}
     >
-      <div style={{ border: "1px solid rgb(205, 206, 220)" }}>
-        <div>
-          <div className="d-flex align-items-center  justify-content-between">
-            <span style={{ marginLeft: "25px", marginTop: "25px" }}>
-              <CDBIcon icon="chart-line" /> New Workflow
-            </span>
+      <div
+        style={{
+          border: "1px solid rgb(205, 206, 220)",
 
-            <div>
-              <button
-                style={{
-                  marginRight: "15px",
-                  border: "1px solid blue",
-                  color: "blue",
-                  backgroundColor: "transparent",
-                  padding: "5px",
-                }}
-              >
-                Delete WorkFlow
-              </button>
-              <button
-                style={{ marginRight: "25px", marginTop: "30px" }}
-                className="btn btn-primary"
-              >
-                Save Workflow
-              </button>
+          borderRight: "none",
+        }}
+      >
+        <div className=" row">
+          <div className=" col-sm-2">
+            <div className="rotate-button">
+              <Link path to="/WorkFlow">
+                list of{" "}
+                <span style={{ fontSize: "15px", display: "block" }}>
+                  Workflow
+                </span>
+              </Link>
             </div>
           </div>
-          <span
-            style={{
-              opacity: "0.6",
-              marginLeft: "30px",
-              display: "block",
-              fontSize: "12px",
-            }}
-          >
-            Create a process flow with stages, sub steps and manage notification
-            triggers
-          </span>
+          <div className="col-sm-6 " style={{ marginTop: "15px" }}>
+            <span style={{ marginLeft: "25px" }}>
+              <CDBIcon icon="chart-line" /> New Workflow
+            </span>
+            <span
+              style={{
+                opacity: "0.6",
+                marginLeft: "30px",
+                display: "block",
+                fontSize: "12px",
+              }}
+            >
+              Create a process flow with stages, sub steps and manage
+              notification triggers
+            </span>
+          </div>
+          <div className="col-sm-4">
+            <button
+              style={{
+                marginRight: "15px",
+                border: "1px solid blue",
+                color: "blue",
+                backgroundColor: "transparent",
+                padding: "5px",
+              }}
+            >
+              Delete WorkFlow
+            </button>
+            <button
+              style={{ marginRight: "25px", marginTop: "30px" }}
+              className="btn btn-primary"
+            >
+              Save Workflow
+            </button>
+          </div>
         </div>
-        <div style={{ marginBottom: "30px" }}></div>
       </div>
-      <div style={{ border: "1px solid rgb(205, 206, 220)", fontSize: "12px" }}>
+      <div
+        style={{
+          border: "1px solid rgb(205, 206, 220)",
+          fontSize: "12px",
+          borderRight: "none",
+        }}
+      >
         <div>
           <label
             for="exampleInputEmail"
@@ -153,7 +173,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
         >
           <Link path to="/AddStage">
             <button className="btn btn-primary">
-              <span style={{ marginRight: "5px" }}>+</span> Add stage
+              <span style={{ marginRight: "7px" }}>+</span> Add stage
             </button>
           </Link>
         </div>
@@ -174,7 +194,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
               <div
                 className="zoom-out-image"
                 style={{
-                  border: "1px solid rgb(205, 206, 220)",
+                  border: "2px solid rgb(205, 206, 220)",
                   padding: "20px",
                 }}
               >
@@ -344,9 +364,8 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
           <div className="image-col">
             <div className="zoom-out-image">
               <div
-                className=""
                 style={{
-                  border: "1px solid rgb(205, 206, 220)",
+                  border: "2px solid rgb(205, 206, 220)",
 
                   padding: "20px",
                   marginTop: "40px",
@@ -530,7 +549,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
             <div className="zoom-out-image">
               <div
                 style={{
-                  border: "1px solid rgb(205, 206, 220)",
+                  border: "2px solid rgb(205, 206, 220)",
 
                   padding: "20px",
                   marginTop: "40px",
