@@ -93,7 +93,7 @@ export const Dashboard = ({ isSidebarOpen }) => {
       style={{
         flex: "1",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "83px",
+        marginLeft: isSidebarOpen ? "270px" : "80px",
         fontFamily: "sans-serif",
       }}
     >

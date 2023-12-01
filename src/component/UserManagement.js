@@ -40,7 +40,7 @@ const UserManagement = ({ isSidebarOpen }) => {
         flex: "1",
         fontFamily: "sans-serif",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "93px",
+        marginLeft: isSidebarOpen ? "270px" : "80px",
       }}
     >
       <div

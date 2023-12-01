@@ -30,7 +30,7 @@ function Application({ isSidebarOpen }) {
         flex: "1",
         fontFamily: "Open Sans, sans-serif",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "83px",
+        marginLeft: isSidebarOpen ? "270px" : "80px",
       }}
     >
       <div
