@@ -42,7 +42,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
       style={{
         flex: "1",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "80px",
+        marginLeft: isSidebarOpen ? "282px" : "92px",
         fontFamily: "sans-serif",
       }}
     >
@@ -55,7 +55,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
       >
         <div className=" row">
           <div className=" col-sm-2">
-            <div className="rotate-button">
+            <div className="rotate-button hover-container">
               <Link path to="/WorkFlow">
                 list of{" "}
                 <span style={{ fontSize: "15px", display: "block" }}>
@@ -89,6 +89,7 @@ const CreateWorkFlow = ({ isSidebarOpen }) => {
                 backgroundColor: "transparent",
                 padding: "5px",
               }}
+              className="hover-container"
             >
               Delete WorkFlow
             </button>

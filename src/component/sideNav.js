@@ -7,6 +7,7 @@ import {
 } from "cdbreact";
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
+import "../App.css";
 
 const SideNav = ({ onToggleSidebar }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -40,7 +41,12 @@ const SideNav = ({ onToggleSidebar }) => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
+            <NavLink
+              exact
+              to="/"
+              activeClassName="activeClicked"
+              className="hover-container"
+            >
               <CDBSidebarMenuItem icon="signal">Dashboard</CDBSidebarMenuItem>
             </NavLink>
             <Link exact to="/Application">

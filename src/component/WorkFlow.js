@@ -51,7 +51,7 @@ function WorkFlow({ isSidebarOpen }) {
         fontFamily: "Open Sans, sans-serif",
         position: "relative",
         transition: "margin-left 0.3s",
-        marginLeft: isSidebarOpen ? "270px" : "80px",
+        marginLeft: isSidebarOpen ? "282px" : "92px",
       }}
     >
       <div
@@ -91,7 +91,7 @@ function WorkFlow({ isSidebarOpen }) {
           <input
             className="input"
             type="search"
-            placeholder=" search for application "
+            placeholder="       Search for application "
             style={{
               borderRadius: "20px",
               height: "45px",
@@ -104,6 +104,7 @@ function WorkFlow({ isSidebarOpen }) {
               width: "30%",
               paddingRight: "px",
               marginBottom: "20px",
+              fontSize: "12px",
             }}
           />
         </div>
@@ -170,6 +171,7 @@ function WorkFlow({ isSidebarOpen }) {
                     overlay={popoverTop}
                   >
                     <button
+                      className="hover-container"
                       style={{
                         backgroundColor: "white",
                         border: "1px solid white",
@@ -282,7 +284,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "590px",
-                    left: isSidebarOpen ? "300px" : "350px",
+                    left: isSidebarOpen ? "298px" : "348px",
                   }}
                 ></label>
                 <label
@@ -292,7 +294,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "591px",
-                    left: isSidebarOpen ? "305px" : "355px",
+                    left: isSidebarOpen ? "303px" : "353px",
                   }}
                 ></label>
                 <label
@@ -302,7 +304,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "53px",
                     position: "absolute",
                     bottom: "540px",
-                    left: isSidebarOpen ? "320px" : "370px",
+                    left: isSidebarOpen ? "318px" : "368px",
                   }}
                 ></label>
                 <label
@@ -311,8 +313,8 @@ function WorkFlow({ isSidebarOpen }) {
 
                     width: "15px",
                     position: "absolute",
-                    bottom: "538px",
-                    left: isSidebarOpen ? "305px" : "355px",
+                    bottom: "539px",
+                    left: isSidebarOpen ? "303px" : "353px",
                   }}
                 ></label>
                 <label
@@ -322,7 +324,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "537px",
-                    left: isSidebarOpen ? "300px" : "350px",
+                    left: isSidebarOpen ? "298px" : "348px",
                   }}
                 ></label>
                 <div
@@ -451,7 +453,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "475px",
-                    left: isSidebarOpen ? "300px" : "350px",
+                    left: isSidebarOpen ? "298px" : "348px",
                   }}
                 ></label>
 
@@ -462,7 +464,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "476px",
-                    left: isSidebarOpen ? "305px" : "355px",
+                    left: isSidebarOpen ? "303px" : "353px",
                   }}
                 ></label>
                 <label
@@ -472,7 +474,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "53px",
                     position: "absolute",
                     bottom: "425px",
-                    left: isSidebarOpen ? "320px" : "370px",
+                    left: isSidebarOpen ? "318px" : "368px",
                   }}
                 ></label>
                 <label
@@ -481,8 +483,8 @@ function WorkFlow({ isSidebarOpen }) {
 
                     width: "15px",
                     position: "absolute",
-                    bottom: "423px",
-                    left: isSidebarOpen ? "305px" : "355px",
+                    bottom: "424px",
+                    left: isSidebarOpen ? "303px" : "353px",
                   }}
                 ></label>
                 <label
@@ -492,7 +494,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "422px",
-                    left: isSidebarOpen ? "300px" : "350px",
+                    left: isSidebarOpen ? "298px" : "348px",
                   }}
                 ></label>
                 <div
@@ -617,19 +619,23 @@ function WorkFlow({ isSidebarOpen }) {
                 </span>
               </div>
               <div className="col-sm-3">
-                <div className="mb-2">
-                  <button
-                    onClick={handleDeleteButton}
-                    style={{
-                      backgroundColor: "white",
-                      border: "1px solid white",
-                      marginTop: "30px",
-                      marginLeft: "15px",
-                    }}
+                <ButtonToolbar>
+                  <OverlayTrigger
+                    trigger="click"
+                    placement="top"
+                    overlay={popoverTop}
                   >
-                    <CDBIcon icon="ellipsis-h" />
-                  </button>
-                </div>
+                    <button
+                      style={{
+                        backgroundColor: "white",
+                        border: "1px solid white",
+                        marginTop: "30px",
+                      }}
+                    >
+                      <CDBIcon icon="ellipsis-h" />
+                    </button>
+                  </OverlayTrigger>
+                </ButtonToolbar>
               </div>
             </div>
             <div
@@ -897,19 +903,23 @@ function WorkFlow({ isSidebarOpen }) {
                 </span>
               </div>
               <div className="col-sm-3">
-                <div className="mb-2">
-                  <button
-                    onClick={handleDeleteButton}
-                    style={{
-                      backgroundColor: "white",
-                      border: "1px solid white",
-                      marginTop: "30px",
-                      marginLeft: "15px",
-                    }}
+                <ButtonToolbar>
+                  <OverlayTrigger
+                    trigger="click"
+                    placement="top"
+                    overlay={popoverTop}
                   >
-                    <CDBIcon icon="ellipsis-h" />
-                  </button>
-                </div>
+                    <button
+                      style={{
+                        backgroundColor: "white",
+                        border: "1px solid white",
+                        marginTop: "30px",
+                      }}
+                    >
+                      <CDBIcon icon="ellipsis-h" />
+                    </button>
+                  </OverlayTrigger>
+                </ButtonToolbar>
               </div>
             </div>
             <div
@@ -929,7 +939,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "650px",
-                    right: isSidebarOpen ? "295px" : "358px",
+                    right: isSidebarOpen ? "295px" : "359px",
                   }}
                 ></label>
                 <label
@@ -939,7 +949,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "651px",
-                    right: isSidebarOpen ? "300px" : "363px",
+                    right: isSidebarOpen ? "300px" : "364px",
                   }}
                 ></label>
                 <label
@@ -949,7 +959,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "53px",
                     position: "absolute",
                     bottom: "600px",
-                    right: isSidebarOpen ? "312px" : "378px",
+                    right: isSidebarOpen ? "314px" : "379px",
                   }}
                 ></label>
                 <label
@@ -959,7 +969,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "600px",
-                    right: isSidebarOpen ? "297px" : "363px",
+                    right: isSidebarOpen ? "300px" : "364px",
                   }}
                 ></label>
                 <label
@@ -969,7 +979,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "598px",
-                    right: isSidebarOpen ? "295px" : "358px",
+                    right: isSidebarOpen ? "295px" : "359px",
                   }}
                 ></label>
                 <div
@@ -1012,7 +1022,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "5px",
                     width: "5px",
                     position: "absolute",
-                    bottom: "537px",
+                    bottom: "538px",
                     right: isSidebarOpen ? "58px" : "70px",
                   }}
                 ></label>
@@ -1053,7 +1063,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "5px",
                     width: "5px",
                     position: "absolute",
-                    bottom: "480px",
+                    bottom: "481px",
                     right: isSidebarOpen ? "60px" : "72px",
                   }}
                 ></label>
@@ -1321,7 +1331,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "115px",
-                    left: isSidebarOpen ? "295px" : "344px",
+                    left: isSidebarOpen ? "292px" : "341px",
                   }}
                 ></label>
                 <label
@@ -1331,7 +1341,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "116px",
-                    left: isSidebarOpen ? "300px" : "348px",
+                    left: isSidebarOpen ? "297px" : "345px",
                   }}
                 ></label>
                 <label
@@ -1341,7 +1351,7 @@ function WorkFlow({ isSidebarOpen }) {
                     height: "53px",
                     position: "absolute",
                     bottom: "63px",
-                    left: isSidebarOpen ? "313px" : "362px",
+                    left: isSidebarOpen ? "310px" : "359px",
                   }}
                 ></label>
                 <label
@@ -1351,7 +1361,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "15px",
                     position: "absolute",
                     bottom: "63px",
-                    left: isSidebarOpen ? "300px" : "348px",
+                    left: isSidebarOpen ? "297px" : "345px",
                   }}
                 ></label>
                 <label
@@ -1361,7 +1371,7 @@ function WorkFlow({ isSidebarOpen }) {
                     width: "5px",
                     position: "absolute",
                     bottom: "62px",
-                    left: isSidebarOpen ? "295px" : "344px",
+                    left: isSidebarOpen ? "292px" : "341px",
                   }}
                 ></label>
                 <div

@@ -190,9 +190,9 @@ function Application({ isSidebarOpen }) {
           </thead>
           <tbody>
             <tr>
-              <th scope="row">
+              <th scope="row ">
                 <button
-                  className="shadow-0"
+                  className="shadow-0 hover-container"
                   style={{
                     height: "30px",
                     border: "1px solid rgb(205, 206, 220",
@@ -202,6 +202,7 @@ function Application({ isSidebarOpen }) {
                   <CDBIcon icon="caret-down" />
                 </button>
                 <Link
+                  className="hover-container"
                   style={{
                     color: "blue",
                     fontSize: "12px",
@@ -400,7 +401,7 @@ function Application({ isSidebarOpen }) {
             <tr>
               <th scope="row">
                 <button
-                  className="shadow-0"
+                  className="shadow-0 hover-container"
                   style={{
                     height: "30px",
                     border: "1px solid rgb(205, 206, 220",
@@ -410,6 +411,7 @@ function Application({ isSidebarOpen }) {
                   <CDBIcon icon="caret-down" />
                 </button>
                 <Link
+                  className="hover-container"
                   style={{
                     color: "blue",
                     fontSize: "12px",
@@ -571,7 +573,7 @@ function Application({ isSidebarOpen }) {
             <tr>
               <th scope="row">
                 <button
-                  className="shadow-0"
+                  className="shadow-0 hover-container"
                   style={{
                     height: "30px",
                     border: "1px solid rgb(205, 206, 220",
@@ -581,6 +583,7 @@ function Application({ isSidebarOpen }) {
                   <CDBIcon icon="caret-down" />
                 </button>
                 <Link
+                  className="hover-container"
                   style={{
                     color: "blue",
                     fontSize: "12px",
@@ -976,7 +979,6 @@ function Application({ isSidebarOpen }) {
                   backgroundColor: "rgb(247, 248, 254)",
                   borderRight: "none",
                   borderBottom: "none",
-                  marginBottom: "none",
                 }}
               >
                 <div
@@ -1403,6 +1405,7 @@ function Application({ isSidebarOpen }) {
         >
           <div style={{ marginLeft: "30px" }}>
             <button
+              className="hover-container"
               onClick={() => setShow(false)}
               style={{
                 backgroundColor: '"rgba(151, 163, 172, 0.1)',

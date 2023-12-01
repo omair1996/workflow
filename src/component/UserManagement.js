@@ -87,7 +87,7 @@ const UserManagement = ({ isSidebarOpen }) => {
             <input
               className="input"
               type="search"
-              placeholder=" search for application "
+              placeholder=""
               style={{
                 borderRadius: "20px",
                 height: "45px",
