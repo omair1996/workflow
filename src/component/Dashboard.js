@@ -429,7 +429,7 @@ export const Dashboard = ({ isSidebarOpen }) => {
                 Stages
               </label>
               <Form.Check inline type="switch" id="custom-switch" />
-              <label style={{ fontSize: "12px", opacity: "0.8" }}>Stages</label>
+              <label style={{ fontSize: "12px", opacity: "0.8" }}>Steps</label>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 import {
   CDBSidebar,
   CDBSidebarContent,
+  CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
@@ -66,20 +67,26 @@ const SideNav = ({ onToggleSidebar }) => {
             </Link>
           </CDBSidebarMenu>
         </CDBSidebarContent>
-        <CDBSidebarContent className="sidebar-content">
-          <CDBSidebarMenu>
-            <div style={{ paddingTop: "50px" }}>
-              <NavLink exact to="/Notification" activeClassName="activeClicked">
-                <CDBSidebarMenuItem icon="bell">
-                  Notifications
-                </CDBSidebarMenuItem>
-              </NavLink>
-              <NavLink exact to="profile" activeClassName="activeClicked">
-                <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
-              </NavLink>
-            </div>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
+        <CDBSidebarFooter>
+          <CDBSidebarContent className="sidebar-content">
+            <CDBSidebarMenu>
+              <div>
+                <NavLink
+                  exact
+                  to="/Notification"
+                  activeClassName="activeClicked"
+                >
+                  <CDBSidebarMenuItem icon="bell">
+                    Notifications
+                  </CDBSidebarMenuItem>
+                </NavLink>
+                <NavLink exact to="profile" activeClassName="activeClicked">
+                  <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
+                </NavLink>
+              </div>
+            </CDBSidebarMenu>
+          </CDBSidebarContent>
+        </CDBSidebarFooter>
       </CDBSidebar>
     </div>
   );

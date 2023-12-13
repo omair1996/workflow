@@ -193,68 +193,48 @@ function WorkFlow({ isSidebarOpen }) {
             >
               <div style={{ display: "block", height: "1px" }}></div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "650px",
-                    left: "71px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "651px",
-                    left: "56px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "600px",
-                    left: "56px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "600px",
-                    left: "56px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "598px",
-                    left: "71px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
-                    display: "block",
+
                     marginLeft: "30px",
                     marginTop: "10px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -277,56 +257,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "590px",
-                    left: isSidebarOpen ? "300px" : "350px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "591px",
-                    left: isSidebarOpen ? "305px" : "355px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "540px",
-                    left: isSidebarOpen ? "320px" : "370px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "538px",
-                    left: isSidebarOpen ? "305px" : "355px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "537px",
-                    left: isSidebarOpen ? "300px" : "350px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -339,6 +269,57 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "17px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "243px" : "294px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -361,57 +342,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "537px",
-                    left: "71px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "539px",
-                    left: "56px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "57px",
-                    position: "absolute",
-                    bottom: "483px",
-                    left: "56px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "482px",
-                    left: "56px",
-                  }}
-                ></label>
-
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "480px",
-                    left: "71px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -421,9 +351,58 @@ function WorkFlow({ isSidebarOpen }) {
                     marginTop: "20px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
-                    position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "18px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "16px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -446,57 +425,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "475px",
-                    left: isSidebarOpen ? "300px" : "350px",
-                  }}
-                ></label>
-
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "476px",
-                    left: isSidebarOpen ? "305px" : "355px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "425px",
-                    left: isSidebarOpen ? "320px" : "370px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "423px",
-                    left: isSidebarOpen ? "305px" : "355px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "422px",
-                    left: isSidebarOpen ? "300px" : "350px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -509,6 +437,58 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "17px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "243px" : "294px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -540,6 +520,27 @@ function WorkFlow({ isSidebarOpen }) {
                     backgroundColor: "rgb(255, 255, 255)",
                   }}
                 >
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "18px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "16px",
+                    }}
+                  ></label>
+
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -648,57 +649,6 @@ function WorkFlow({ isSidebarOpen }) {
             >
               <div style={{ display: "block", height: "1px" }}></div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "650px",
-                    left: isSidebarOpen ? "430px" : "492px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "651px",
-                    left: isSidebarOpen ? "415px" : "477px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "600px",
-                    left: isSidebarOpen ? "413px" : "475px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "600px",
-                    left: isSidebarOpen ? "415px" : "477px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "598px",
-                    left: isSidebarOpen ? "430px" : "492px",
-                  }}
-                ></label>
-
                 <div
                   style={{
                     height: "40px",
@@ -711,6 +661,36 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -733,56 +713,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "590px",
-                    right: isSidebarOpen ? "415px" : "490px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "591px",
-                    right: isSidebarOpen ? "400px" : "475px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "540px",
-                    right: isSidebarOpen ? "400px" : "475px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "538px",
-                    right: isSidebarOpen ? "400px" : "475px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "537px",
-                    right: isSidebarOpen ? "415px" : "490px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -795,6 +725,57 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "17px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "243px" : "294px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -826,6 +807,26 @@ function WorkFlow({ isSidebarOpen }) {
                     backgroundColor: "rgb(255, 255, 255)",
                   }}
                 >
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "228px" : "280px",
+                      marginTop: "18px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "224px" : "275px",
+                      marginTop: "16px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -932,56 +933,6 @@ function WorkFlow({ isSidebarOpen }) {
             >
               <div style={{ display: "block", height: "1px" }}></div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "650px",
-                    right: isSidebarOpen ? "298px" : "361px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "651px",
-                    right: isSidebarOpen ? "303px" : "366px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "600px",
-                    right: isSidebarOpen ? "316px" : "381px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "600px",
-                    right: isSidebarOpen ? "303px" : "366px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "598px",
-                    right: isSidebarOpen ? "298px" : "361px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -994,6 +945,36 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1016,57 +997,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "537px",
-                    right: isSidebarOpen ? "58px" : "70px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "539px",
-                    right: isSidebarOpen ? "45px" : "57px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "57px",
-                    position: "absolute",
-                    bottom: "483px",
-                    right: isSidebarOpen ? "45px" : "57px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "482px",
-                    right: isSidebarOpen ? "45px" : "57px",
-                  }}
-                ></label>
-
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "480px",
-                    right: isSidebarOpen ? "60px" : "72px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -1079,6 +1009,57 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "233px" : "284px",
+                      marginTop: "17px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "237px" : "289px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "252px" : "303px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1111,6 +1092,57 @@ function WorkFlow({ isSidebarOpen }) {
                   backgroundColor: "rgb(255, 255, 255)",
                 }}
               >
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    marginLeft: isSidebarOpen ? "233px" : "284px",
+                    marginTop: "17px",
+                  }}
+                ></label>
+
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    marginLeft: isSidebarOpen ? "237px" : "289px",
+                    marginTop: "18px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    marginLeft: "-5px",
+                    marginTop: "10px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    marginLeft: "-20px",
+                    marginTop: "12px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "25px",
+                    height: "60px",
+                    position: "absolute",
+                    marginLeft: "-20px",
+                    marginTop: "12px",
+                  }}
+                ></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
@@ -1142,6 +1174,26 @@ function WorkFlow({ isSidebarOpen }) {
                   backgroundColor: "rgb(255, 255, 255)",
                 }}
               >
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    marginLeft: "-5px",
+                    marginTop: "10px",
+                  }}
+                ></label>
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+
+                    width: "15px",
+                    position: "absolute",
+                    marginLeft: "-20px",
+                    marginTop: "12px",
+                  }}
+                ></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
@@ -1165,7 +1217,10 @@ function WorkFlow({ isSidebarOpen }) {
             </div>
           </div>
         </div>
-        <div className="col-sm-4" style={{ marginBottom: "30px" }}>
+        <div
+          className="col-sm-4"
+          style={{ marginBottom: "30px", marginLeft: "30px" }}
+        >
           <div
             style={{
               border: "1px solid rgb(205, 206, 220)",
@@ -1240,56 +1295,6 @@ function WorkFlow({ isSidebarOpen }) {
             >
               <div style={{ display: "block", height: "1px" }}></div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "130px",
-                    left: "40px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "132px",
-                    left: "29px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "132px",
-                    left: "29px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "184px",
-                    left: "29px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "183px",
-                    left: "40px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -1302,6 +1307,36 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1324,56 +1359,6 @@ function WorkFlow({ isSidebarOpen }) {
                 </div>
               </div>
               <div>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "115px",
-                    left: isSidebarOpen ? "295px" : "344px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "116px",
-                    left: isSidebarOpen ? "300px" : "348px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "53px",
-                    position: "absolute",
-                    bottom: "63px",
-                    left: isSidebarOpen ? "313px" : "362px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    bottom: "63px",
-                    left: isSidebarOpen ? "300px" : "348px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    bottom: "62px",
-                    left: isSidebarOpen ? "295px" : "344px",
-                  }}
-                ></label>
                 <div
                   style={{
                     height: "40px",
@@ -1386,6 +1371,58 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: "-5px",
+                      marginTop: "10px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "12px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      backgroundColor: "rgb(50, 111, 228)",
+                      height: "5px",
+                      width: "5px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "248px" : "299px",
+                      marginTop: "17px",
+                    }}
+                  ></label>
+
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "10px",
+                      width: "15px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "252px" : "304px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
+                  <label
+                    style={{
+                      border: "1px solid rgb(50, 111, 228)",
+                      borderRadius: "25px",
+                      height: "60px",
+                      position: "absolute",
+                      marginLeft: isSidebarOpen ? "267px" : "318px",
+                      marginTop: "19px",
+                    }}
+                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1418,6 +1455,27 @@ function WorkFlow({ isSidebarOpen }) {
                   backgroundColor: "rgb(255, 255, 255)",
                 }}
               >
+                <label
+                  style={{
+                    backgroundColor: "rgb(50, 111, 228)",
+                    height: "5px",
+                    width: "5px",
+                    position: "absolute",
+                    marginLeft: isSidebarOpen ? "248px" : "299px",
+                    marginTop: "17px",
+                  }}
+                ></label>
+
+                <label
+                  style={{
+                    border: "1px solid rgb(50, 111, 228)",
+                    borderRadius: "10px",
+                    width: "15px",
+                    position: "absolute",
+                    marginLeft: isSidebarOpen ? "252px" : "304px",
+                    marginTop: "18px",
+                  }}
+                ></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
