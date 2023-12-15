@@ -189,6 +189,7 @@ function WorkFlow({ isSidebarOpen }) {
               style={{
                 backgroundColor: "rgb(247, 248, 254)",
                 padding: "15px",
+                paddingBottom: "40px",
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
@@ -205,36 +206,6 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -254,6 +225,7 @@ function WorkFlow({ isSidebarOpen }) {
                       5
                     </span>
                   </div>
+                  <label className="flowbar-dot-left"></label>
                 </div>
               </div>
               <div>
@@ -263,63 +235,14 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
+                  <label className="flowbar-dot-right"></label>
 
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "17px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "243px" : "294px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -339,6 +262,10 @@ function WorkFlow({ isSidebarOpen }) {
                       2
                     </span>
                   </div>
+                  <label className="flowbar-dot-left"></label>
+                  <div>
+                    <label className="left-bar"></label>
+                  </div>
                 </div>
               </div>
               <div>
@@ -348,61 +275,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "18px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "16px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-right"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -422,6 +301,10 @@ function WorkFlow({ isSidebarOpen }) {
                       3
                     </span>
                   </div>
+                  <label className="flowbar-dot-left"></label>
+                  <div>
+                    <label className="right-bar"></label>
+                  </div>
                 </div>
               </div>
               <div>
@@ -431,64 +314,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "17px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "243px" : "294px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-right"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -508,6 +340,10 @@ function WorkFlow({ isSidebarOpen }) {
                       3
                     </span>
                   </div>
+                  <label className="flowbar-dot-left"></label>
+                  <div>
+                    <label className="left-bar"></label>
+                  </div>
                 </div>
                 <div
                   style={{
@@ -515,31 +351,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "18px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "16px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-right"></label>
 
                   <div
                     className="d-flex justify-content-between"
@@ -559,6 +377,10 @@ function WorkFlow({ isSidebarOpen }) {
                     >
                       2
                     </span>
+                  </div>
+
+                  <div>
+                    <label className="right-bar"></label>
                   </div>
                 </div>
               </div>
@@ -644,7 +466,7 @@ function WorkFlow({ isSidebarOpen }) {
               style={{
                 backgroundColor: "rgb(247, 248, 254)",
                 padding: "15px",
-                height: "320px",
+                height: "300px",
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
@@ -661,36 +483,7 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -719,63 +512,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "17px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "243px" : "294px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -795,6 +538,10 @@ function WorkFlow({ isSidebarOpen }) {
                       2
                     </span>
                   </div>
+                  <label className="flowbar-dot-right"></label>
+                  <div>
+                    <label className="left-bar"></label>
+                  </div>
                 </div>
                 <div
                   style={{
@@ -802,31 +549,12 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
+                    position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "228px" : "280px",
-                      marginTop: "18px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "224px" : "275px",
-                      marginTop: "16px",
-                    }}
-                  ></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -845,6 +573,10 @@ function WorkFlow({ isSidebarOpen }) {
                     >
                       3
                     </span>
+                  </div>
+                  <label className="flowbar-dot-right"></label>
+                  <div>
+                    <label className="right-bar"></label>
                   </div>
                 </div>
               </div>
@@ -928,7 +660,7 @@ function WorkFlow({ isSidebarOpen }) {
               style={{
                 backgroundColor: "rgb(247, 248, 254)",
                 padding: "15px",
-                height: "320px",
+                height: "300px",
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
@@ -945,36 +677,7 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1003,63 +706,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "233px" : "284px",
-                      marginTop: "17px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "237px" : "289px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "252px" : "303px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1079,6 +732,10 @@ function WorkFlow({ isSidebarOpen }) {
                       2
                     </span>
                   </div>
+                  <label className="flowbar-dot-right"></label>
+                  <div>
+                    <label className="left-bar"></label>
+                  </div>
                 </div>
               </div>
               <div
@@ -1087,62 +744,13 @@ function WorkFlow({ isSidebarOpen }) {
                   border: "1px solid rgb(175, 177, 199)",
                   width: "80%",
                   display: "block",
-                  marginTop: "20px",
+                  marginTop: "8px",
                   marginLeft: "30px",
                   backgroundColor: "rgb(255, 255, 255)",
+                  position: "relative",
                 }}
               >
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    marginLeft: isSidebarOpen ? "233px" : "284px",
-                    marginTop: "17px",
-                  }}
-                ></label>
-
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    marginLeft: isSidebarOpen ? "237px" : "289px",
-                    marginTop: "18px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    marginLeft: "-5px",
-                    marginTop: "10px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    marginLeft: "-20px",
-                    marginTop: "12px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "25px",
-                    height: "60px",
-                    position: "absolute",
-                    marginLeft: "-20px",
-                    marginTop: "12px",
-                  }}
-                ></label>
+                <label className="flowbar-dot-left"></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
@@ -1162,6 +770,10 @@ function WorkFlow({ isSidebarOpen }) {
                     3
                   </span>
                 </div>
+                <label className="flowbar-dot-right"></label>
+                <div>
+                  <label className="right-bar"></label>
+                </div>
               </div>
               <div
                 style={{
@@ -1169,31 +781,13 @@ function WorkFlow({ isSidebarOpen }) {
                   border: "1px solid rgb(175, 177, 199)",
                   width: "80%",
                   display: "block",
-                  marginTop: "20px",
+                  marginTop: "8px",
                   marginLeft: "30px",
                   backgroundColor: "rgb(255, 255, 255)",
+                  position: "relative",
                 }}
               >
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    marginLeft: "-5px",
-                    marginTop: "10px",
-                  }}
-                ></label>
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-
-                    width: "15px",
-                    position: "absolute",
-                    marginLeft: "-20px",
-                    marginTop: "12px",
-                  }}
-                ></label>
+                <label className="flowbar-dot-left"></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
@@ -1212,6 +806,9 @@ function WorkFlow({ isSidebarOpen }) {
                   >
                     2
                   </span>
+                </div>
+                <div>
+                  <label className="left-bar"></label>
                 </div>
               </div>
             </div>
@@ -1291,6 +888,7 @@ function WorkFlow({ isSidebarOpen }) {
               style={{
                 backgroundColor: "rgb(247, 248, 254)",
                 padding: "15px",
+                paddingBottom: "30px",
               }}
             >
               <div style={{ display: "block", height: "1px" }}></div>
@@ -1307,36 +905,7 @@ function WorkFlow({ isSidebarOpen }) {
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1365,64 +934,13 @@ function WorkFlow({ isSidebarOpen }) {
                     border: "1px solid rgb(175, 177, 199)",
                     width: "80%",
                     display: "block",
-                    marginTop: "20px",
+                    marginTop: "8px",
                     marginLeft: "30px",
                     backgroundColor: "rgb(255, 255, 255)",
                     position: "relative",
                   }}
                 >
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: "-5px",
-                      marginTop: "10px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: "-20px",
-                      marginTop: "12px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      backgroundColor: "rgb(50, 111, 228)",
-                      height: "5px",
-                      width: "5px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "248px" : "299px",
-                      marginTop: "17px",
-                    }}
-                  ></label>
-
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "10px",
-                      width: "15px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "252px" : "304px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
-                  <label
-                    style={{
-                      border: "1px solid rgb(50, 111, 228)",
-                      borderRadius: "25px",
-                      height: "60px",
-                      position: "absolute",
-                      marginLeft: isSidebarOpen ? "267px" : "318px",
-                      marginTop: "19px",
-                    }}
-                  ></label>
+                  <label className="flowbar-dot-left"></label>
                   <div
                     className="d-flex justify-content-between"
                     style={{ marginTop: "12px" }}
@@ -1442,6 +960,10 @@ function WorkFlow({ isSidebarOpen }) {
                       3
                     </span>
                   </div>
+                  <label className="flowbar-dot-right"></label>
+                  <div>
+                    <label className="left-bar"></label>
+                  </div>
                 </div>
               </div>
               <div
@@ -1450,32 +972,12 @@ function WorkFlow({ isSidebarOpen }) {
                   border: "1px solid rgb(175, 177, 199)",
                   width: "80%",
                   display: "block",
-                  marginTop: "20px",
+                  marginTop: "8px",
                   marginLeft: "30px",
                   backgroundColor: "rgb(255, 255, 255)",
+                  position: "relative",
                 }}
               >
-                <label
-                  style={{
-                    backgroundColor: "rgb(50, 111, 228)",
-                    height: "5px",
-                    width: "5px",
-                    position: "absolute",
-                    marginLeft: isSidebarOpen ? "248px" : "299px",
-                    marginTop: "17px",
-                  }}
-                ></label>
-
-                <label
-                  style={{
-                    border: "1px solid rgb(50, 111, 228)",
-                    borderRadius: "10px",
-                    width: "15px",
-                    position: "absolute",
-                    marginLeft: isSidebarOpen ? "252px" : "304px",
-                    marginTop: "18px",
-                  }}
-                ></label>
                 <div
                   className="d-flex justify-content-between"
                   style={{ marginTop: "12px" }}
@@ -1494,6 +996,10 @@ function WorkFlow({ isSidebarOpen }) {
                   >
                     2
                   </span>
+                </div>
+                <label className="flowbar-dot-right"></label>
+                <div>
+                  <label className="right-bar"></label>
                 </div>
               </div>
             </div>

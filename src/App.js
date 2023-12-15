@@ -1,6 +1,5 @@
 import { Dashboard } from "./component/Dashboard";
-import { Notification } from "./component/Notification";
-import { Profile } from "./component/Profile";
+
 import UserManagement from "./component/UserManagement";
 import SideNav from "./component/sideNav";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
@@ -38,14 +37,7 @@ function App() {
             path="/WorkFlow"
             element={<WorkFlow isSidebarOpen={isSidebarOpen} />}
           />
-          <Route
-            path="/Notification"
-            element={<Notification isSidebarOpen={isSidebarOpen} />}
-          />
-          <Route
-            path="Profile"
-            element={<Profile isSidebarOpen={isSidebarOpen} />}
-          />
+
           <Route
             path="/CreateWorkFlow"
             element={<CreateWorkFlow isSidebarOpen={isSidebarOpen} />}
