@@ -1,13 +1,12 @@
 import { CDBIcon } from "cdbreact";
 import "../App.css";
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   BarChart,
   Bar,
   Legend,
   XAxis,
   YAxis,
-  CartesianGrid,
   PieChart,
   Pie,
   Cell,
@@ -88,6 +87,7 @@ export const Dashboard = ({ isSidebarOpen }) => {
   ];
 
   const COLORS3 = ["rgb(89, 217, 115)", "rgb(208, 213, 217)"];
+
   return (
     <div
       style={{
@@ -105,7 +105,7 @@ export const Dashboard = ({ isSidebarOpen }) => {
         }}
       >
         <div>
-          <div className="d-flex align-items-center  justify-content-between">
+          <div className="d-flex align-items-center justify-content-between">
             <span style={{ marginLeft: "25px", marginTop: "25px" }}>
               <CDBIcon icon="signal"></CDBIcon> Dashboard
             </span>
@@ -114,7 +114,7 @@ export const Dashboard = ({ isSidebarOpen }) => {
               style={{ marginRight: "25px", marginTop: "25px" }}
               className="btn btn-primary"
             >
-              Reporst
+              Reports
             </button>
           </div>
           <span
@@ -130,372 +130,390 @@ export const Dashboard = ({ isSidebarOpen }) => {
         </div>
       </div>
       <div className="row">
-        <div
-          className="col-sm-6"
-          style={{
-            border: "1px solid rgb(205, 206, 220)",
-            height: "200px",
-            marginTop: "50px",
-            borderRadius: "5px",
-            width: "450px",
-            marginLeft: "40px",
-            backgroundColor: "rgb(247, 248, 254)",
-          }}
-        >
+        <div className="col-md-6">
           <div
-            className="d-flex align-items-center justify-content-between"
-            style={{ marginTop: "15px" }}
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "50px",
+              borderRadius: "5px",
+              backgroundColor: "rgb(247, 248, 254)",
+              padding: "20px",
+              marginLeft: "12px",
+            }}
           >
-            <div>
-              <span
-                style={{
-                  marginLeft: "20px",
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                }}
-              >
-                36
-              </span>{" "}
+            <div
+              className="d-flex align-items-center justify-content-between"
+              style={{ marginTop: "15px" }}
+            >
+              <div>
+                <span
+                  style={{
+                    marginLeft: "20px",
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  36
+                </span>
+              </div>
+              <div>
+                <span style={{ display: "block", fontSize: "15px" }}>
+                  Completed
+                </span>
+                <span
+                  style={{
+                    marginLeft: "50px",
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  12
+                </span>
+              </div>
             </div>
-            <div>
-              <span
-                style={{
-                  display: "block",
-                  fontSize: "15px",
-                }}
-              >
-                Completed
-              </span>
-              <span
-                style={{
-                  marginLeft: "50px",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                }}
-              >
-                12
-              </span>
-            </div>
-          </div>
-          <div
-            className="d-flex align-items-center justify-content-between"
-            style={{ marginTop: "20px" }}
-          >
-            <div style={{ marginLeft: "20px", fontSize: "12px" }}>
-              Total Applications
-            </div>
-            <div>
-              {" "}
-              <span style={{ display: "block", fontSize: "15px" }}>
-                Pending
-              </span>
-              <span
-                style={{
-                  marginLeft: "38px",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                }}
-              >
-                24
-              </span>
+            <div
+              className="d-flex align-items-center justify-content-between"
+              style={{ marginTop: "20px" }}
+            >
+              <div style={{ marginLeft: "20px", fontSize: "12px" }}>
+                Total Applications
+              </div>
+              <div>
+                <span style={{ display: "block", fontSize: "15px" }}>
+                  Pending
+                </span>
+                <span
+                  style={{
+                    marginLeft: "38px",
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  24
+                </span>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          className="col-sm-6"
-          style={{
-            marginTop: "50px",
-            borderRadius: "5px",
-            width: "450px",
-            marginLeft: "20px",
-            backgroundColor: "rgb(50, 111, 228)",
-            color: "white",
-          }}
-        >
-          <div className="d-flex justify-content-around">
-            <div style={{ marginTop: "30px" }}>
-              <span style={{ display: "block", fontSize: "12px" }}>
-                Overdue
-              </span>
-              <span style={{ fontSize: "20px", fontWeight: "bolder" }}>
-                Applications
-              </span>
-            </div>
-            <div>
-              {" "}
-              <PieChart width={200} height={200}>
-                <Pie
-                  isAnimationActive={false}
-                  data={data}
-                  innerRadius={40}
-                  outerRadius={60}
-                  dataKey="value"
-                >
-                  {data.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-              </PieChart>
+        <div className="col-md-6">
+          <div
+            style={{
+              marginTop: "50px",
+              borderRadius: "5px",
+              backgroundColor: "rgb(50, 111, 228)",
+              color: "white",
+              padding: "10px",
+            }}
+          >
+            <div className="d-flex justify-content-around">
+              <div style={{ marginTop: "30px" }}>
+                <span style={{ display: "block", fontSize: "12px" }}>
+                  Overdue
+                </span>
+                <span style={{ fontSize: "20px", fontWeight: "bolder" }}>
+                  Applications
+                </span>
+              </div>
+              <div>
+                <PieChart width={200} height={200}>
+                  <Pie
+                    isAnimationActive={false}
+                    data={data}
+                    innerRadius={40}
+                    outerRadius={60}
+                    dataKey="value"
+                  >
+                    {data.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className="row">
-        <div
-          className="col-sm-6"
-          style={{
-            border: "1px solid rgb(205, 206, 220)",
-
-            marginTop: "20px",
-          }}
-        >
-          <div
-            className="d-flex justify-content-around"
-            style={{ padding: "15px" }}
-          >
-            <div style={{ marginTop: "30px", marginLeft: "20px" }}>
-              <span
-                style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
-              >
-                Distribution by
-              </span>
-              <span style={{ fontWeight: "bolder" }}>Application Status</span>
-            </div>
-            <div style={{ marginTop: "50px" }}>
-              <PieChart width={200} height={200}>
-                <Pie
-                  data={data2}
-                  innerRadius={80}
-                  outerRadius={100}
-                  dataKey="value"
-                  paddingAngle={1}
-                >
-                  {data2.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS2[index % COLORS2.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </div>
-            <div style={{ marginTop: "30px", marginRight: "15px" }}>
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(89, 217, 115)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>Completed</span>
-              </div>
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(50, 111, 228)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>In Progress</span>
-              </div>
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(208, 213, 217)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>To Do</span>
-              </div>
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(151, 163, 172)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>Paused</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="col-sm-6"
-          style={{
-            border: "1px solid rgb(205, 206, 220)",
-
-            marginTop: "20px",
-            paddingBottom: "20px",
-          }}
-        >
-          <div
-            className="d-flex justify-content-around"
-            style={{ padding: "15px" }}
-          >
-            <div style={{ marginTop: "30px", marginLeft: "20px" }}>
-              <span
-                style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
-              >
-                Distribution by
-              </span>
-              <span style={{ fontWeight: "bolder" }}>
-                Application completion
-              </span>
-            </div>
-            <div style={{ marginTop: "50px" }}>
-              <PieChart width={200} height={200}>
-                <Pie
-                  data={data3}
-                  innerRadius={80}
-                  outerRadius={100}
-                  dataKey="value"
-                  paddingAngle={1}
-                >
-                  {data3.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS3[index % COLORS3.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </div>
-            <div style={{ marginTop: "30px", marginRight: "15px" }}>
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(89, 217, 115)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>Completed</span>
-              </div>
-
-              <div>
-                <label
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    backgroundColor: "rgb(208, 213, 217)",
-                    marginTop: "5px",
-                  }}
-                ></label>{" "}
-                <span style={{ fontSize: "12px" }}>Pending</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            border: "1px solid rgb(205, 206, 220)",
-          }}
-        >
-          <div
-            className="d-flex justify-content-between"
-            style={{ marginTop: "50px" }}
-          >
-            <div style={{ marginLeft: "50px" }}>
-              <span
-                style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
-              >
-                Status Distribution
-              </span>{" "}
-              <span style={{ fontWeight: "bolder" }}>By Months</span>
-            </div>
-            <div style={{ marginRight: "30px" }}>
-              <label
-                style={{
-                  fontSize: "12px",
-                  opacity: "0.8",
-                  marginRight: "10px",
-                }}
-              >
-                Stages
-              </label>
-              <Form.Check inline type="switch" id="custom-switch" />
-              <label style={{ fontSize: "12px", opacity: "0.8" }}>Steps</label>
-            </div>
-          </div>
-
-          <div>
-            <BarChart
-              width={1000}
-              height={350}
-              data={barData}
-              margin={{
-                top: 20,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-            >
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="complete" stackId="a" fill="rgb(89, 217, 115)" />
-              <Bar dataKey="in_progress" stackId="a" fill="rgb(50, 111, 228)" />
-              <Bar dataKey="pause" stackId="a" fill="rgb(208, 213, 217)" />
-              <Bar dataKey="to do" stackId="a" fill="rgb(151, 163, 172)" />
-            </BarChart>
-          </div>
-          <div
-            className="d-flex justify-content-between"
-            style={{ marginTop: "50px" }}
-          >
-            <div style={{ marginLeft: "50px" }}>
-              <span
-                style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
-              >
-                Status Distribution
-              </span>{" "}
-              <span style={{ fontWeight: "bolder" }}>By Months</span>
-            </div>
-            <div style={{ marginRight: "30px" }}></div>
-          </div>
+        <div className="col-md-6 mb-4">
           <div
             style={{
-              padding: "10px",
-              paddingBottom: "15px",
-              marginBottom: "15px",
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
             }}
           >
-            <BarChart
-              width={1000}
-              height={350}
-              data={barData2}
-              margin={{
-                top: 20,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
+            <div
+              className="d-flex justify-content-around"
+              style={{ padding: "15px" }}
             >
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="complete" stackId="a" fill="rgb(89, 217, 115)" />
-              <Bar dataKey="in_progress" stackId="a" fill="rgb(50, 111, 228)" />
-              <Bar dataKey="pause" stackId="a" fill="rgb(208, 213, 217)" />
-              <Bar dataKey="to do" stackId="a" fill="rgb(151, 163, 172)" />
-            </BarChart>
+              <div style={{ marginTop: "30px", marginLeft: "20px" }}>
+                <span
+                  style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
+                >
+                  Distribution by
+                </span>
+                <span style={{ fontWeight: "bolder" }}>Application Status</span>
+              </div>
+              <div style={{ marginTop: "50px" }}>
+                <PieChart width={200} height={200}>
+                  <Pie
+                    data={data2}
+                    innerRadius={80}
+                    outerRadius={100}
+                    dataKey="value"
+                    paddingAngle={1}
+                  >
+                    {data2.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS2[index % COLORS2.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </div>
+              <div style={{ marginTop: "50px" }}>
+                <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(89, 217, 115)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    Completed
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(50, 111, 228)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    In Progress
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(208, 213, 217)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    To Do
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(151, 163, 172)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    Paused
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 mb-4">
+          <div
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
+              height: "250px",
+            }}
+          >
+            <div className="d-flex justify-content-around">
+              <div style={{ marginTop: "30px", marginLeft: "20px" }}>
+                <span
+                  style={{ display: "block", fontSize: "12px", opacity: "0.8" }}
+                >
+                  Tasks
+                </span>
+                <span style={{ fontWeight: "bolder" }}>Completion Rate</span>
+              </div>
+              <div style={{ marginTop: "50px" }}>
+                <PieChart width={200} height={200}>
+                  <Pie
+                    data={data3}
+                    innerRadius={70}
+                    outerRadius={100}
+                    dataKey="value"
+                  >
+                    {data3.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS3[index % COLORS3.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </div>
+              <div style={{ marginTop: "50px" }}>
+                <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(89, 217, 115)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    Completed
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        color: "rgb(208, 213, 217)",
+                        fontSize: "30px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      ●
+                    </span>
+                    Pending
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-lg-6 mb-4">
+          <div
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
+              height: "300px",
+            }}
+          >
+            <div style={{ marginTop: "10px", padding: "10px" }}>
+              <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
+                Monthly Report
+              </span>
+              <BarChart
+                width={400}
+                height={230}
+                data={barData}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="complete" stackId="a" fill="rgb(89, 217, 115)" />
+                <Bar
+                  dataKey="in_progress"
+                  stackId="a"
+                  fill="rgb(50, 111, 228)"
+                />
+                <Bar dataKey="pause" stackId="a" fill="rgb(151, 163, 172)" />
+                <Bar dataKey="to do" stackId="a" fill="rgb(208, 213, 217)" />
+              </BarChart>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6 mb-4">
+          <div
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
+              height: "300px",
+            }}
+          >
+            <div style={{ marginTop: "10px", padding: "10px" }}>
+              <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
+                Current Status
+              </span>
+              <BarChart
+                width={400}
+                height={230}
+                data={barData2}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="complete" stackId="a" fill="rgb(89, 217, 115)" />
+                <Bar
+                  dataKey="in_progress"
+                  stackId="a"
+                  fill="rgb(50, 111, 228)"
+                />
+                <Bar dataKey="pause" stackId="a" fill="rgb(151, 163, 172)" />
+                <Bar dataKey="to do" stackId="a" fill="rgb(208, 213, 217)" />
+              </BarChart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row mb-4">
+        <div className="col-lg-6">
+          <div
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
+              padding: "10px",
+            }}
+          >
+            <div className="d-flex justify-content-between">
+              <span
+                style={{
+                  fontWeight: "bold",
+                  marginTop: "20px",
+                  marginLeft: "15px",
+                }}
+              >
+                Task Performance Report
+              </span>
+              <Form.Select style={{ width: "200px", height: "30px" }}>
+                <option>View Report</option>
+              </Form.Select>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div
+            style={{
+              border: "1px solid rgb(205, 206, 220)",
+              marginTop: "20px",
+              padding: "10px",
+            }}
+          >
+            <div className="d-flex justify-content-between">
+              <span
+                style={{
+                  fontWeight: "bold",
+                  marginTop: "20px",
+                  marginLeft: "15px",
+                }}
+              >
+                Device Performance Report
+              </span>
+              <Form.Select style={{ width: "200px", height: "30px" }}>
+                <option>View Report</option>
+              </Form.Select>
+            </div>
           </div>
         </div>
       </div>

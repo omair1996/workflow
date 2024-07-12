@@ -7,23 +7,41 @@ import {
   CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 
 const SideNav = ({ onToggleSidebar }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
     onToggleSidebar(!isSidebarOpen);
   };
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsSidebarOpen(false);
+    }
+  }, [isMobile]);
+
   return (
     <div
       style={{
         height: "100vh",
         position: "fixed",
-
-        width: isSidebarOpen ? "270px" : "93px",
+        width: isSidebarOpen ? "250px" : "0px",
         transition: "width 0.3s",
         fontFamily: "sans-serif",
       }}
@@ -34,7 +52,7 @@ const SideNav = ({ onToggleSidebar }) => {
             <img
               onClick={toggleSidebar}
               style={{ height: "65px" }}
-              src="	https://eul.netlify.app/static/media/fulllogo.865179eb.svg"
+              src="https://eul.netlify.app/static/media/fulllogo.865179eb.svg"
               alt="logo"
             />
           }
